@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactListViewController" customModule="InviteFlow" customModuleProvider="target">
+            <connections>
+                <outlet property="contactTableView" destination="cYM-NJ-ztS" id="x1F-D1-ZHb"/>
+                <outlet property="view" destination="iN0-l3-epB" id="i8f-3m-j2V"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cYM-NJ-ztS">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="gPE-y1-ZTs"/>
+                        <outlet property="delegate" destination="-1" id="oc8-AQ-jpN"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="cYM-NJ-ztS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="00t-ME-9Me"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="cYM-NJ-ztS" secondAttribute="top" id="4e6-kE-c14"/>
+                <constraint firstItem="cYM-NJ-ztS" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="IWx-KQ-izb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cYM-NJ-ztS" secondAttribute="bottom" id="fSh-Wt-CuW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="226" y="58"/>
+        </view>
+    </objects>
+</document>

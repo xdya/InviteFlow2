@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ContactListViewHeader" customModule="InviteFlow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="32"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0e-ab-LgP">
+                    <rect key="frame" x="16" y="6" width="43" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <color key="textColor" red="0.48627450980392156" green="0.51764705882352935" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tF3-tI-qO3">
+                    <rect key="frame" x="287" y="1" width="82" height="30"/>
+                    <state key="normal" title="Multi-select"/>
+                    <connections>
+                        <action selector="onTapMultiSelect:" destination="iN0-l3-epB" eventType="touchUpInside" id="sA5-ed-K8T"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Roe-Jp-5Cp">
+                    <rect key="frame" x="287" y="1" width="82" height="30"/>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="onTapCancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="gw6-m3-kXr"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mm1-vD-cs2">
+                    <rect key="frame" x="234" y="1" width="41" height="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Invite"/>
+                    <connections>
+                        <action selector="onTapInvite:" destination="iN0-l3-epB" eventType="touchUpInside" id="jnI-9u-QJz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="c0e-ab-LgP" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3Gx-j0-Jxf"/>
+                <constraint firstItem="Roe-Jp-5Cp" firstAttribute="leading" secondItem="tF3-tI-qO3" secondAttribute="leading" id="JFd-t1-ywa"/>
+                <constraint firstItem="c0e-ab-LgP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="QSz-WQ-KfI"/>
+                <constraint firstItem="tF3-tI-qO3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Whp-gI-oOz"/>
+                <constraint firstItem="Roe-Jp-5Cp" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YCm-sk-et0"/>
+                <constraint firstItem="Mm1-vD-cs2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gzB-Jb-myp"/>
+                <constraint firstAttribute="trailing" secondItem="tF3-tI-qO3" secondAttribute="trailing" constant="6" id="j4v-fu-7kH"/>
+                <constraint firstItem="Roe-Jp-5Cp" firstAttribute="trailing" secondItem="tF3-tI-qO3" secondAttribute="trailing" id="lcU-PZ-Oy2"/>
+                <constraint firstItem="tF3-tI-qO3" firstAttribute="leading" secondItem="Mm1-vD-cs2" secondAttribute="trailing" constant="12" id="vbr-h1-1SL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                    <color key="value" red="0.0" green="0.81268728595890416" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="btnCancel" destination="Roe-Jp-5Cp" id="aaj-l9-oQ8"/>
+                <outlet property="btnInvite" destination="Mm1-vD-cs2" id="wji-Cf-IsT"/>
+                <outlet property="btnMultiSelect" destination="tF3-tI-qO3" id="DkH-EZ-ckJ"/>
+                <outlet property="sectionTitle" destination="c0e-ab-LgP" id="ZeO-0u-nvG"/>
+            </connections>
+            <point key="canvasLocation" x="131" y="127"/>
+        </view>
+    </objects>
+</document>
